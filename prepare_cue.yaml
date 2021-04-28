@@ -1,6 +1,6 @@
 # leaf1  
 
-- hosts: leaf1
+- hosts: leaf:spine 
   name: disable NCLU
   become: yes
   gather_facts: no
