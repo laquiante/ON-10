@@ -1,4 +1,4 @@
- set:
+- set:
     interface:
       swp8:
         ip:
