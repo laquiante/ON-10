@@ -6,8 +6,8 @@
   gather_facts: no
   tasks:
     - name: disable NCLU
-      shell: sudo systemctl stop netd
-      shell: sudo systemctl disable netd
+      shell: systemctl stop netd
+      shell: systemctl disable netd
     - name: copy CUE
       copy: 
         src: /home/cumulus/ON-10/cue-test.deb 
@@ -15,6 +15,6 @@
     - name: install CUE
       apt:
         deb: /home/cumulus/cue-test.deb
-     - name: enable CUE
-      shell: sudo systemctl enable cued 
-      shell: sudo systemctl start cued   
+    - name: enable CUE
+      shell: systemctl enable cued 
+      shell: systemctl start cued   
