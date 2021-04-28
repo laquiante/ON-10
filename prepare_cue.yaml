@@ -5,8 +5,9 @@
   become: yes
   gather_facts: no
   tasks:
-    - name: disable NCLU
+    - name: stop NCLU
       shell: systemctl stop netd
+    - name: disable NCLU
       shell: systemctl disable netd
     - name: copy CUE
       copy: 
@@ -16,5 +17,6 @@
       apt:
         deb: /home/cumulus/cue-test.deb
     - name: enable CUE
-      shell: systemctl enable cued 
+      shell: systemctl enable cued
+    - name: start CUE
       shell: systemctl start cued   
