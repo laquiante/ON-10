@@ -11,7 +11,7 @@
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf1
-      shell: cl config apply startup
+      shell: cl config apply startup -y
       
 - hosts: leaf2
   name: startup
@@ -24,4 +24,4 @@
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf2
-      shell: cl config apply startup     
+      shell: cl config apply startup -y     
