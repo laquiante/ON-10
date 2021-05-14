@@ -15,3 +15,6 @@
         br_default:
           vlan:
             '10': {}
+    platform:
+      hostname:
+        value: spine4
