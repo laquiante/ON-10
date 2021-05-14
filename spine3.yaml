@@ -1,0 +1,13 @@
+ set:
+    interface:
+      swp1:
+        bridge:
+          domain:
+            br_default: {}
+        type: swp
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '10': {}
+            '20': {}
