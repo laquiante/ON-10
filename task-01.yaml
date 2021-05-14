@@ -8,7 +8,7 @@
   tasks:
     - name: copy leaf1 task-01.yaml
       copy:
-        src: /home/cumulus/ON-10/leaf1-task-01.yaml
+        src: /home/cumulus/ON-10/task-01-leaf1.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf1
@@ -21,7 +21,7 @@
   tasks:
     - name: copy leaf2 task-02.yaml
       copy:
-        src: /home/cumulus/ON-10/leaf2-task-02.yaml
+        src: /home/cumulus/ON-10/task-01-leaf2.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf2
@@ -34,7 +34,7 @@
   tasks:
     - name: copy leaf1 task-01.yaml
       copy:
-        src: /home/cumulus/ON-10/spine3-task-01.yaml
+        src: /home/cumulus/ON-10/task-01-spine3.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine3
@@ -47,7 +47,7 @@
   tasks:
     - name: copy leaf1 task-01.yaml
       copy:
-        src: /home/cumulus/ON-10/spine4-task-01.yaml
+        src: /home/cumulus/ON-10/task-01-spine4.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine4
