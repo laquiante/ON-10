@@ -1,6 +1,16 @@
- set:
+- set:
     interface:
       swp1:
+        bridge:
+          domain:
+            br_default: {}
+        type: swp
+      swp3:
+        bridge:
+          domain:
+            br_default: {}
+        type: swp
+      swp4:
         bridge:
           domain:
             br_default: {}
