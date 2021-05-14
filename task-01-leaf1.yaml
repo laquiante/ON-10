@@ -1,20 +1,4 @@
- set:
-    service:
-      ntp:
-        mgmt:
-          server:
-            0.cumulusnetworks.pool.ntp.org: {}
-            1.cumulusnetworks.pool.ntp.org: {}
-            2.cumulusnetworks.pool.ntp.org: {}
-            3.cumulusnetworks.pool.ntp.org: {}
-    bridge:
-      domain:
-        br_default:
-          type: vlan-aware
-        br_defalt:
-          vlan:
-            '10': {}
-            '20': {}
+- set:
     interface:
       swp8:
         bridge:
@@ -22,9 +6,11 @@
             br_default:
               access: 10
         type: swp
-      swp9:
+      swp1:
         bridge:
           domain:
-            br_default:
-              access: 20
+            br_default: {}
         type: swp
+    platform:
+      hostname:
+        value: leaf1
