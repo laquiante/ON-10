@@ -1,11 +1,11 @@
 - set:
     interface:
-      swp8:
+      swp1:
         bridge:
           domain:
             br_default: {}
         type: swp
-      swp1:
+      swp8:
         bridge:
           domain:
             br_default:
