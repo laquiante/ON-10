@@ -11,11 +11,11 @@
           domain:
             br_default: {}
         type: swp
+    platform:
+      hostname:
+        value: leaf1
     bridge:
       domain:
         br_default:
           vlan:
             '10': {}
-    platform:
-      hostname:
-        value: leaf1
