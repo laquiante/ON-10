@@ -1,0 +1,36 @@
+- set:
+    service:
+      ntp:
+        mgmt:
+          server:
+            0.cumulusnetworks.pool.ntp.org: {}
+            1.cumulusnetworks.pool.ntp.org: {}
+            2.cumulusnetworks.pool.ntp.org: {}
+            3.cumulusnetworks.pool.ntp.org: {}
+    platform:
+      hostname:
+        value: spine3
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '2': {}
+            '3': {}
+    interface:
+      swp1-2:
+        bridge:
+          domain:
+            br_default: {}
+        type: swp
+      vlan2:
+        ip:
+          address:
+            172.16.2.254/24: {}
+        vlan: 2
+      vlan2-3:
+        type: svi
+      vlan3:
+        ip:
+          address:
+            172.16.3.254/24: {}
+        vlan: 3
