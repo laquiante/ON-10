@@ -1,0 +1,51 @@
+- hosts: leaf1
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to leaf1 
+      copy:
+        src: /home/cumulus/ON-10/ON-10/practice-02-leaf-1-startup.yaml
+        dest: /etc/cue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf1
+      shell: cl config apply startup -y
+      
+- hosts: leaf2
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to leaf2
+      copy:
+        src: /home/cumulus/ON-10/practice-02-leaf-2-startup.yaml
+        dest: /etc/cue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf2
+      shell: cl config apply startup -y   
+      
+- hosts: spine3
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to spine3 
+      copy:
+        src: /home/cumulus/ON-10/ON-10/practice-02-spine-3-startup.yaml
+        dest: /etc/cue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for spine3
+      shell: cl config apply startup -y
+      
+- hosts: spine4
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to spine4 
+      copy:
+        src: /home/cumulus/ON-10/ON-10/practice-02-spine-4-startup.yaml
+        dest: /etc/cue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for spine4
+      shell: cl config apply startup -y
