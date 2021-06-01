@@ -1,0 +1,21 @@
+- set:
+    interface:
+      swp1:
+        type: swp
+        bridge:
+          domain:
+            br_default: {}
+      swp2:
+        type: swp
+        bridge:
+          domain:
+            br_default: {}
+      swp3:
+        type: swp
+      swp4:
+        type: swp
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '1': {}
