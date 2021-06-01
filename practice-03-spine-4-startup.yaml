@@ -1,0 +1,21 @@
+- set:
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '2': {}
+            '3': {}
+    service:
+      ntp:
+        mgmt:
+          server:
+            0.cumulusnetworks.pool.ntp.org: {}
+            1.cumulusnetworks.pool.ntp.org: {}
+            2.cumulusnetworks.pool.ntp.org: {}
+            3.cumulusnetworks.pool.ntp.org: {}
+    interface:
+      swp1-2:
+        bridge:
+          domain:
+            br_default: {}
+        type: swp
