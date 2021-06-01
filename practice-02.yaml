@@ -5,7 +5,7 @@
   tasks:
     - name: copy to leaf1 
       copy:
-        src: /home/cumulus/ON-10/ON-10/practice-02-leaf-1-startup.yaml
+        src: /home/cumulus/ON-10/practice-02-leaf-1-startup.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf1
@@ -31,7 +31,7 @@
   tasks:
     - name: copy to spine3 
       copy:
-        src: /home/cumulus/ON-10/ON-10/practice-02-spine-3-startup.yaml
+        src: /home/cumulus/ON-10/practice-02-spine-3-startup.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine3
@@ -44,7 +44,7 @@
   tasks:
     - name: copy to spine4 
       copy:
-        src: /home/cumulus/ON-10/ON-10/practice-02-spine-4-startup.yaml
+        src: /home/cumulus/ON-10/Opractice-02-spine-4-startup.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine4
