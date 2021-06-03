@@ -11,7 +11,7 @@
       shell: systemctl disable netd
     - name: copy CUE
       copy: 
-        src: /home/cumulus/ON-10/python3-cue_0.21.05.20.0-cl5.0.0u1_all.deb
+        src: /home/cumulus/ON-10/python3-cue_0.21.06.03.0-cl4.4.0u1_all.deb
         dest: /home/cumulus/cue-test.deb
     - name: install CUE
       apt:
