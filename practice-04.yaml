@@ -62,7 +62,7 @@
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf1
-      shell: cl config apply startup -y
+      shell: nv config apply startup -y
       
 - hosts: leaf2
   name: startup
@@ -75,7 +75,7 @@
         dest: /etc/nvue/startup.yaml
     # aktivieren
     - name: activate changes for leaf2
-      shell: cl config apply startup -y   
+      shell: nv config apply startup -y   
       
 - hosts: spine3
   name: startup
@@ -88,7 +88,7 @@
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine3
-      shell: cl config apply startup -y
+      shell: nv config apply startup -y
       
 - hosts: spine4
   name: startup
@@ -101,4 +101,4 @@
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine4
-      shell: cl config apply startup -y
+      shell: nv config apply startup -y
