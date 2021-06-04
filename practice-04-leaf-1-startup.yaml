@@ -1,0 +1,34 @@
+- set:
+    service:
+      ntp:
+        mgmt:
+          server:
+            0.cumulusnetworks.pool.ntp.org: {}
+            1.cumulusnetworks.pool.ntp.org: {}
+            2.cumulusnetworks.pool.ntp.org: {}
+            3.cumulusnetworks.pool.ntp.org: {}
+    interface:
+      BOND_TO_SPINES:
+        type: bond
+        bond:
+          member:
+            swp1: {}
+            swp2: {}
+        bridge:
+          domain:
+            br_default: {}
+      swp8:
+        bridge:
+          domain:
+            br_default:
+              access: 2
+        type: swp
+      swp9:
+        bridge:
+          domain:
+            br_default:
+              access: 3
+        type: swp
+    bridge:
+      domain:
+        br_default: {}
