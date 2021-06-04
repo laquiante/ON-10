@@ -37,6 +37,30 @@
         bridge:
           domain:
             br_default: {}
+      vlan2:
+        ip:
+          address:
+            172.16.2.252/24: {}
+          vrr:
+            address:
+              172.16.2.254/24: {}
+            state:
+              up: {}
+            mac-address: 00:00:5e:00:01:02
+        type: svi
+        vlan: 2
+      vlan3:
+        ip:
+          address:
+            172.16.3.252/24: {}
+          vrr:
+            address:
+              172.16.3.254/24: {}
+            mac-address: 00:00:5e:00:01:03
+            state:
+              up: {}
+        type: svi
+        vlan: 3
     bridge:
       domain:
         br_default:
