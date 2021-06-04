@@ -1,0 +1,50 @@
+- set:
+    mlag:
+      mac-address: 44:38:39:FF:00:01
+      backup:
+        192.168.200.5:
+          vrf: mgmt
+      init-delay: 15
+      priority: 1000
+    interface:
+      peerlink:
+        type: peerlink
+        bond:
+          member:
+            swp3: {}
+            swp4: {}
+      peerlink.4094:
+        type: sub
+        base-interface: peerlink
+        vlan: 4094
+      LEAF1:
+        bond:
+          member:
+            swp1: {}
+          mlag:
+            id: 1
+        type: bond
+        bridge:
+          domain:
+            br_default: {}
+      LEAF2:
+        bond:
+          member:
+            swp2: {}
+          mlag:
+            id: 2
+        type: bond
+        bridge:
+          domain:
+            br_default: {}
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '2': {}
+            '3': {}
+          stp:
+            priority: 4096
+    platform:
+      hostname:
+        value: spine3
