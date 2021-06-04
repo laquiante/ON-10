@@ -97,7 +97,7 @@
   tasks:
     - name: copy to spine4 
       copy:
-        src: /home/cumulus/ON-10/Opractice-04-spine-4-startup.yaml
+        src: /home/cumulus/ON-10/practice-04-spine-4-startup.yaml
         dest: /etc/cue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine4
