@@ -23,4 +23,7 @@
         type: swp
     bridge:
       domain:
-        br_default: {}
+        br_default:
+          vlan:
+            '2': {}
+            '3': {}
