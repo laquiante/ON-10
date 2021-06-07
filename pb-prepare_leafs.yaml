@@ -8,7 +8,7 @@
     - name: copy startup.yaml
       copy:
         src: /home/cumulus/ON-10/leaf1_startup.yaml
-        dest: /etc/cue.d/startup.yaml
+        dest: /etc/nvue/startup.yaml
     # aktivieren
     - name: activate changes for leaf1
       shell: cl config apply startup -y
@@ -21,7 +21,7 @@
     - name: copy startup.yaml
       copy:
         src: /home/cumulus/ON-10/leaf2_startup.yaml
-        dest: /etc/cue.d/startup.yaml
+        dest: /etc/nvue/startup.yaml
     # aktivieren
     - name: activate changes for leaf2
       shell: cl config apply startup -y     
