@@ -72,7 +72,7 @@
     - name: copy to leaf2
       copy:
         src: /home/cumulus/ON-10/practice-06-leaf-2-startup.yaml
-        dest: /etc/nvue/startup.yaml
+        dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf2
       shell: nv config apply startup -y   
@@ -98,7 +98,7 @@
     - name: copy to spine4 
       copy:
         src: /home/cumulus/ON-10/practice-06-spine-4-startup.yaml
-        dest: /etc/cue.d/startup.yaml
+        dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine4
       shell: nv config apply startup -y
