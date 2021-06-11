@@ -84,7 +84,7 @@
   tasks:
     - name: copy to spine3 
       copy:
-        src: /home/cumulus/ON-10/practice-07-spine-3-startup.yaml
+        src: /home/cumulus/ON-10/practice-06-spine-3-startup.yaml
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine3
@@ -97,7 +97,7 @@
   tasks:
     - name: copy to spine4 
       copy:
-        src: /home/cumulus/ON-10/practice-07-spine-4-startup.yaml
+        src: /home/cumulus/ON-10/practice-06-spine-4-startup.yaml
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for spine4
