@@ -36,7 +36,7 @@
       bgp:
         autonomous-system: 65101
         enable: on
-        router-id: 172.16.100.4
+        router-id: 172.16.100.1
     vrf:
       default:
         router:
