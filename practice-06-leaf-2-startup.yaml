@@ -18,14 +18,16 @@
       swp2:
         type: swp
       swp8:
-        ip:
-          address:
-            172.16.28.1/24: {}
+        bridge:
+          domain:
+            br_default:
+              access: 100
         type: swp
       swp9:
-        ip:
-          address:
-            172.16.29.1/24: {}
+        bridge:
+          domain:
+            br_default:
+              access: 200
         type: swp
     platform:
       hostname:
@@ -43,9 +45,15 @@
               swp1:
                 remote-as: external
                 type: unnumbered
+                address-family:
+                  l2vpn-evpn:
+                    enable: on
               swp2:
                 remote-as: external
                 type: unnumbered
+                address-family:
+                  l2vpn-evpn:
+                    enable: on
             enable: on
             address-family:
               ipv4-unicast:
@@ -54,3 +62,22 @@
                   172.16.28.0/24: {}
                   172.16.29.0/24: {}
                 enable: on
+              l2vpn-evpn:
+                enable: on
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '100':
+              vni:
+                '10': {}
+            '200':
+              vni:
+                '20': {}
+    nve:
+      vxlan:
+        source:
+          address: 172.16.100.2
+        enable: on
+    evpn:
+      enable: on
