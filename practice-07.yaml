@@ -1,0 +1,104 @@
+- hosts: host1
+  name: Interfaces
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: IPv4 address
+      copy:
+        src: /home/cumulus/ON-10/practice-06-host-1
+        dest: /etc/network/interfaces
+    # aktivieren
+    - name: activate changes for host1
+      shell: /sbin/ifreload -a
+      
+- hosts: host2
+  name: Interfaces
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: IPv4 address
+      copy:
+        src: /home/cumulus/ON-10/practice-06-host-2
+        dest: /etc/network/interfaces
+    # aktivieren
+    - name: activate changes for host2
+      shell: /sbin/ifreload -a
+          
+- hosts: host3
+  name: Interfaces
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: IPv4 address
+      copy:
+        src: /home/cumulus/ON-10/practice-06-host-3
+        dest: /etc/network/interfaces
+    # aktivieren
+    - name: activate changes for host3
+      shell: /sbin/ifreload -a
+      
+- hosts: host4
+  name: Interfaces
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: IPv4 address
+      copy:
+        src: /home/cumulus/ON-10/practice-06-host-4
+        dest: /etc/network/interfaces
+    # aktivieren
+    - name: activate changes for host4
+      shell: /sbin/ifreload -a
+      
+      
+- hosts: leaf1
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to leaf1 
+      copy:
+        src: /home/cumulus/ON-10/practice-07-leaf-1-startup.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf1
+      shell: nv config apply startup -y
+      
+- hosts: leaf2
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to leaf2
+      copy:
+        src: /home/cumulus/ON-10/practice-07-leaf-2-startup.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf2
+      shell: nv config apply startup -y   
+      
+- hosts: spine3
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to spine3 
+      copy:
+        src: /home/cumulus/ON-10/practice-07-spine-3-startup.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for spine3
+      shell: nv config apply startup -y
+      
+- hosts: spine4
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy to spine4 
+      copy:
+        src: /home/cumulus/ON-10/practice-07-spine-4-startup.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for spine4
+      shell: nv config apply startup -y
