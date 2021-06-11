@@ -1,6 +1,12 @@
 # ON-10
 
-Prepare (1,2,3)
+Preparation:
+
+pb-prepare_cue
+pb-prepare_hosts
+pb-prepare_leafs
+
+Labs:
 
 practice-01
 
