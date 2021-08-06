@@ -2,7 +2,7 @@
 
 Preparation:
 
-pb-prepare_cue
+pb-prepare_cue (nvue)
 pb-prepare_hosts
 pb-prepare_leafs
 
@@ -20,4 +20,6 @@ practice-05, BGP unnumbered
 
 practice-06, EVPN Layer 2 
 
-practice-07, EVPN Layer 3
+practice-07, EVPN Layer 3 ASYM
+
+practice-08, EVPN Layer 3 SYM
