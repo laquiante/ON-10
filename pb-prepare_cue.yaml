@@ -1,4 +1,4 @@
-# 28-APRIL-2021, preparing CL 4.3.0 to use the engineering cue.deb  
+# 06-AUG-2021 NVUE  
 
 - hosts: leaf:spine 
   name: disable NCLU
@@ -9,13 +9,6 @@
       shell: systemctl stop netd
     - name: disable NCLU
       shell: systemctl disable netd
-    - name: copy CUE
-      copy: 
-        src: /home/cumulus/ON-10/python3-cue_0.21.06.03.0-cl4.4.0u1_all.deb
-        dest: /home/cumulus/cue-test.deb
-    - name: install CUE
-      apt:
-        deb: /home/cumulus/cue-test.deb
     - name: enable CUE
       shell: systemctl enable cued
     - name: start CUE
