@@ -9,7 +9,7 @@
       shell: systemctl stop netd
     - name: disable NCLU
       shell: systemctl disable netd
-    - name: enable CUE
-      shell: systemctl enable cued
-    - name: start CUE
-      shell: systemctl start cued   
+    - name: enable NVUE was CUE
+      shell: systemctl enable nvued
+    - name: start NVUE was CUE
+      shell: systemctl start nvued   
