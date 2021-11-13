@@ -1,3 +1,7 @@
+
+## sollte überarbeitet werden und wird bis es fertig ist auf private gesetzt
+## besser wäre ein neues lab und slides für das nächste boot camp
+
 # ON-10 (nvue)
 
 Preparation:
