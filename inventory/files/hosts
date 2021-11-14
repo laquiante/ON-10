@@ -11,6 +11,12 @@ leaf2 ansible_host=192.168.200.3
 spine3 ansible_host=192.168.200.4
 spine4 ansible_host=192.168.200.5
 
+[host]
+host1 ansible_host=192.168.200.6
+host2 ansible_host=192.168.200.7
+host3 ansible_host=192.168.200.8
+host4 ansible_host=192.168.200.9
+
 [cumulus-nodes:children]
 leaf
 spine
@@ -19,13 +25,8 @@ spine
 cumulus-nodes
 host
 
-[host]
-host1 ansible_host=192.168.200.6
-host2 ansible_host=192.168.200.7
-host3 ansible_host=192.168.200.8
-host4 ansible_host=192.168.200.9
-
 [all:vars]
 ansible_user=cumulus
 ansible_become_pass=Academy123
 ansible_ssh_pass=Academy123
+test_var=test
