@@ -1,6 +1,6 @@
 # 06-AUG-2021 NVUE  
 
-- hosts: leaf:spine 
+- hosts: cumulus-nodes
   name: disable NCLU
   become: yes
   gather_facts: no
