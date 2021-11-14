@@ -1,0 +1,15 @@
+- set:
+    interface:
+      swp8:
+        ip:
+          address:
+            172.16.2.254/24: {}
+        type: swp
+      swp9:
+        ip:
+          address:
+            172.16.3.254/24: {}
+        type: swp
+    platform:
+      hostname:
+        value: leaf2
