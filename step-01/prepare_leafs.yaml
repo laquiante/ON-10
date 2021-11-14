@@ -1,0 +1,27 @@
+# 28-APRIL-2021, preparing the 2 leafs with a hostname and L3 interfaces wiht an IPv4 addresses
+
+- hosts: leaf1
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy startup.yaml
+      copy:
+        src: /home/cumulus/ON-10/leaf1_startup.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf1
+      shell:  nv config apply startup -y
+      
+- hosts: leaf2
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy startup.yaml
+      copy:
+        src: /home/cumulus/ON-10/leaf2_startup.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf2
+      shell: nv config apply startup -y  
