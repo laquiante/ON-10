@@ -2,9 +2,9 @@
 
 ---
 - name: NVUE
-  import_playbook: /home/cumulus/ON-10/step-00/pb-prepare_cue.yaml
+  import_playbook: /home/cumulus/ON-10/step-00/prepare_cue.yaml
   # hier sollte noch ein test eingefügt werden ob 4.4 oder 5.0 bzw groesser
 - name: Hosts
-  import_playbook: /home/cumulus/ON-10/step-00/pb-prepare_hosts.yaml
+  import_playbook: /home/cumulus/ON-10/step-00/prepare_hosts.yaml
 - name: Leafs
-  import_playbook: /home/cumulus/ON-10/step-00/pb-prepare_leafs.yaml
+  import_playbook: /home/cumulus/ON-10/step-00/prepare_leafs.yaml
