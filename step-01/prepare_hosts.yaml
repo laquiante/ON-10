@@ -8,7 +8,7 @@
   tasks:
     - name: configure IPv4 address and route
       copy:
-        src: /home/cumulus/ON-10/inventory/files/{{ inventory-hostname }}
+        src: /home/cumulus/ON-10/inventory/files/{{ inventory_hostname }}
         dest: /etc/network/interfaces
     - name: activate changes 
       ansible.builtin.shell: /sbin/ifreload -a
