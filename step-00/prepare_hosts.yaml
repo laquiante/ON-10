@@ -1,5 +1,6 @@
 # 28-APRIL-2021, preparing the 4 hosts with IPv4 addresses
-# 13-NOVEMER-2021, rewritten a bit
+# 13-NOVEMBER-2021, rewritten a bit
+# 14-NOV moved host files again
 
 - hosts: host
   name: Interfaces
@@ -8,7 +9,7 @@
   tasks:
     - name: configure IPv4 address and route
       copy:
-        src: /home/cumulus/ON-10/inventory/files/{{ inventory_hostname }}
+        src: /home/cumulus/ON-10/step-00/{{ inventory_hostname }}
         dest: /etc/network/interfaces
     - name: activate changes 
       ansible.builtin.shell: /sbin/ifreload -a
