@@ -1,4 +1,5 @@
 # 28-APRIL-2021, preparing the 2 leafs with a hostname and L3 interfaces wiht an IPv4 addresses
+# 14-NOVEMBER-2021 cleaned up a bit
 
 - hosts: leaf
   name: startup
