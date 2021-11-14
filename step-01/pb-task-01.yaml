@@ -2,55 +2,15 @@
 # 14-MAY-2021, hands-on via task-001.yaml and should include spine3 and leaf1
 # 14-NOV-2021, cleaning up a bit
 
-- hosts: leaf1
+- hosts: cumulus-nodes
   name: startup
   become: yes
   gather_facts: no
   tasks:
     - name: copy leaf1 task-01.yaml
       copy:
-        src: /home/cumulus/ON-10/task-01-leaf1.yaml
+        src: /home/cumulus/ON-10/step-01/task-01-{{ inventory_hostname }}.yaml
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
-    - name: activate changes for leaf1
+    - name: activate changes for leaf
       shell: nv config apply startup -y
-      
-- hosts: leaf2
-  name: startup
-  become: yes
-  gather_facts: no
-  tasks:
-    - name: copy leaf2 task-02.yaml
-      copy:
-        src: /home/cumulus/ON-10/task-01-leaf2.yaml
-        dest: /etc/nvue.d/startup.yaml
-    # aktivieren
-    - name: activate changes for leaf2
-      shell: nv config apply startup -y   
-      
-- hosts: spine3
-  name: startup
-  become: yes
-  gather_facts: no
-  tasks:
-    - name: copy spine3 task-01.yaml
-      copy:
-        src: /home/cumulus/ON-10/task-01-spine3.yaml
-        dest: /etc/nvue.d/startup.yaml
-    # aktivieren
-    - name: activate changes for spine3
-      shell: nv config apply startup -y
-      
-- hosts: spine4
-  name: startup
-  become: yes
-  gather_facts: no
-  tasks:
-    - name: copy spine4 task-01.yaml
-      copy:
-        src: /home/cumulus/ON-10/task-01-spine4.yaml
-        dest: /etc/nvue.d/startup.yaml
-    # aktivieren
-    - name: activate changes for spine4
-      shell: nv config apply startup -y
-      
