@@ -10,6 +10,8 @@ step-01: Bridges, VLAN's
 
 step-02: VLAN's and SVI's
 
+step-03: MLAG and VRR
+
 step-03: BGP unnumbered
 
 step-04: EVPN Layer 2 
