@@ -23,7 +23,4 @@
         dest: /etc/network/interfaces
     - name: activate changes 
       ansible.builtin.shell: /sbin/ifreload -a
-    - name: verify
-      ansible.builtin.shell: /sbin/ip -br a
-      register: ipa
-    - debug: msg={{ ipa.stdout }}
+
