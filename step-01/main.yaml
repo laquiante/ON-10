@@ -1,6 +1,7 @@
 # 14-MAY-2021, preparing the 2 switches with L2, bonding, bridge configuration
 # 14-MAY-2021, hands-on via task-001.yaml and should include spine3 and leaf1
 # 14-NOV-2021, cleaning up a bit
+# 01-DEC-2021, updated bridge configuration 
 
 - hosts: cumulus-nodes
   name: startup
