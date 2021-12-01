@@ -1,3 +1,4 @@
+---
 - set:
     interface:
       swp8:
