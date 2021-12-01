@@ -1,1 +1,29 @@
 ---
+- hosts: cumulus-nodes
+  name: startup
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy leaf1 task-02.yaml
+      copy:
+        src: /home/cumulus/ON-10/step-02/task-02-{{ inventory_hostname }}.yaml
+        dest: /etc/nvue.d/startup.yaml
+    # aktivieren
+    - name: activate changes for leaf
+      shell: nv config apply startup -y
+
+- hosts: host
+  name: Interfaces
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: configure IPv4 address 
+      copy:
+        src: /home/cumulus/ON-10/step-02/{{ inventory_hostname }}
+        dest: /etc/network/interfaces
+    - name: activate changes 
+      ansible.builtin.shell: /sbin/ifreload -a
+    - name: verify
+      ansible.builtin.shell: /sbin/ip -br a
+      register: ipa
+    - debug: msg={{ ipa.stdout }}
