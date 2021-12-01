@@ -12,10 +12,10 @@ step-02: VLAN's and SVI's
 
 step-03: MLAG and VRR
 
-step-03: BGP unnumbered
+step-04: BGP unnumbered
 
-step-04: EVPN Layer 2 
+step-05: EVPN Layer 2 
 
-step-05: EVPN Layer 3 ASYM
+step-06: EVPN Layer 3 ASYM
 
-step-06: EVPN Layer 3 SYM
+step-07: EVPN Layer 3 SYM
