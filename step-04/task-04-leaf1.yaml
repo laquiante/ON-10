@@ -1,0 +1,56 @@
+- set:
+    service:
+      ntp:
+        mgmt:
+          server:
+            0.cumulusnetworks.pool.ntp.org: {}
+            1.cumulusnetworks.pool.ntp.org: {}
+            2.cumulusnetworks.pool.ntp.org: {}
+            3.cumulusnetworks.pool.ntp.org: {}
+    interface:
+      lo:
+        ip:
+          address:
+            172.16.100.1/32: {}
+        type: loopback
+      swp1:
+        type: swp
+      swp2:
+        type: swp
+      swp8:
+        ip:
+          address:
+            172.16.18.1/24: {}
+        type: swp
+      swp9:
+        ip:
+          address:
+            172.16.19.1/24: {}
+        type: swp
+    platform:
+      hostname:
+        value: leaf1
+    router:
+      bgp:
+        autonomous-system: 65101
+        enable: on
+        router-id: 172.16.100.1
+    vrf:
+      default:
+        router:
+          bgp:
+            peer:
+              swp1:
+                remote-as: external
+                type: unnumbered
+              swp2:
+                remote-as: external
+                type: unnumbered
+            enable: on
+            address-family:
+              ipv4-unicast:
+                static-network:
+                  172.16.100.1/32: {}
+                  172.16.18.0/24: {}
+                  172.16.19.0/24: {}
+                enable: on
