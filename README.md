@@ -1,6 +1,6 @@
 
-## update DEC-2021 (before CL 5.0 GA)
-# ON-10 (nvue)
+## update 01-DEC-2021 (before CL 5.0 GA)
+# ON-10 (NVUE)
 
 Preparation:
 
