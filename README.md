@@ -1,5 +1,7 @@
 
 ## update 01-DEC-2021 (before CL 5.0 GA)
+## it is expected that with CL 5.0 significant changes will come
+
 # ON-10 (NVUE)
 
 Preparation:
