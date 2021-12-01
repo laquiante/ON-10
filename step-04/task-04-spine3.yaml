@@ -1,0 +1,44 @@
+- set:
+    service:
+      ntp:
+        mgmt:
+          server:
+            0.cumulusnetworks.pool.ntp.org: {}
+            1.cumulusnetworks.pool.ntp.org: {}
+            2.cumulusnetworks.pool.ntp.org: {}
+            3.cumulusnetworks.pool.ntp.org: {}
+    interface:
+      lo:
+        ip:
+          address:
+            172.16.100.3/32: {}
+        type: loopback
+      swp1:
+        type: swp
+      swp2:
+        type: swp
+    platform:
+      hostname:
+        value: spine3
+    router:
+      bgp:
+        autonomous-system: 65100
+        enable: on
+        router-id: 172.16.100.3
+    vrf:
+      default:
+        router:
+          bgp:
+            address-family:
+              ipv4-unicast:
+                static-network:
+                  172.16.100.3/32: {}
+                enable: on
+            enable: on
+            peer:
+              swp1:
+                remote-as: external
+                type: unnumbered
+              swp2:
+                remote-as: external
+                type: unnumbered
