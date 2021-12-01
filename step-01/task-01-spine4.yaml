@@ -1,20 +1,29 @@
 - set:
-    interface:
-      swp1:
-        type: swp
-        bridge:
-          domain:
-            br_default: {}
-      swp3:
-        bridge:
-          domain:
-            br_default: {}
-        type: swp
-    bridge:
-      domain:
-        br_default:
-          vlan:
-            '10': {}
     platform:
       hostname:
         value: spine4
+    bridge:
+      domain:
+        br_A:
+          vlan:
+            '1': {}
+            '2': {}
+            '3': {}
+            '4': {}
+            '5': {}
+            '6': {}
+            '7': {}
+            '8': {}
+            '9': {}
+            '10': {}
+    interface:
+      swp1:
+        bridge:
+          domain:
+            br_A: {}
+        type: swp
+      swp2:
+        bridge:
+          domain:
+            br_A: {}
+        type: swp
