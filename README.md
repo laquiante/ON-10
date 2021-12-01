@@ -6,9 +6,9 @@ Preparation:
 
 step-00: prepare and use NVUE
 
-step-01: bridging, vlans
+step-01: Bridges, VLAN's
 
-step-02: MLAG
+step-02: VLAN's and SVI's
 
 step-03: BGP unnumbered
 
