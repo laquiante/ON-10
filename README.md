@@ -1,29 +1,19 @@
 
-## sollte überarbeitet werden und wird bis es fertig ist auf private gesetzt
-## besser wäre ein neues lab und slides für das nächste boot camp
-
+## update DEC-2021 (before CL 5.0 GA)
 # ON-10 (nvue)
 
 Preparation:
 
-pb-prepare_cue (nvue)
-pb-prepare_hosts
-pb-prepare_leafs
+step-00: prepare and use NVUE
 
-Labs:
+step-01: bridging, vlans
 
-practice-01
+step-02: MLAG
 
-practice-02
+step-03: BGP unnumbered
 
-practice-03
+step-04: EVPN Layer 2 
 
-practice-04, MLAG
+step-05: EVPN Layer 3 ASYM
 
-practice-05, BGP unnumbered
-
-practice-06, EVPN Layer 2 
-
-practice-07, EVPN Layer 3 ASYM
-
-practice-08, EVPN Layer 3 SYM
+step-06: EVPN Layer 3 SYM
