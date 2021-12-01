@@ -6,7 +6,7 @@
   tasks:
     - name: copy leaf1 task-03.yaml
       copy:
-        src: /home/cumulus/ON-10/step-03/task-03-{{ inventory_hostname }}.yaml
+        src: /home/cumulus/ON-10/step-03/{{ inventory_hostname }}.yaml
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes for leaf
