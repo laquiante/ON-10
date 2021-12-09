@@ -1,5 +1,5 @@
 - set:
-    interface:
+   interface:
       swp8:
         bridge:
           domain:
