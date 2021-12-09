@@ -1,6 +1,6 @@
 - set:
-   interface:
-     swp8:
+    interface:
+      swp8:
         bridge:
           domain:
             br_default:
