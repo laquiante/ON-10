@@ -1,6 +1,5 @@
 
-## update 01-DEC-2021 (before CL 5.0 GA)
-## it is expected that with CL 5.0 significant changes will come
+## 21-MARCH-2022, expecting CL 5.0.1
 
 # ON-10 (NVUE)
 
