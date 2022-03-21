@@ -38,6 +38,6 @@
       
     - name: verify
       ansible.builtin.shell: /sbin/ip -br a
-        register: ipa
+      register: ipa
     - debug: msg={{ ipa.stdout }}
        
