@@ -28,7 +28,12 @@
       ansible.builtin.file:
         path: /etc/netplan/50-cloud-init.yaml
         state: absent
+    - name: cloud file entfernen
+      ansible.builtin.file:
+        path: /etc/netplan/config.yaml
+        state: absent
     - name: copy netplan yaml
       copy:
         src:/home/cumulus/ON-10/step-00/host1
         dest: /etc/netplan/config.yaml
+        
