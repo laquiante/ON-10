@@ -19,7 +19,7 @@
 #      register: ipa
 #    - debug: msg={{ ipa.stdout }}
 
-- host: host1
+- hosts: host1
   name: netplan
   become: yes
   gather_facts: no
