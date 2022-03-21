@@ -1,9 +1,10 @@
 # neu 14-NOV-2021
+# update 21-MAR-2022
 
 ---
-- name: NVUE
-  import_playbook: /home/cumulus/ON-10/step-00/prepare_cue.yaml
-  # hier sollte noch ein test eingefügt werden ob 4.4 oder 5.0 bzw groesser
+#- name: NVUE
+#  import_playbook: /home/cumulus/ON-10/step-00/prepare_cue.yaml
+#  # hier sollte noch ein test eingefügt werden ob 4.4 oder 5.0 bzw groesser
 - name: Hosts
   import_playbook: /home/cumulus/ON-10/step-00/prepare_hosts.yaml
 - name: Leafs
