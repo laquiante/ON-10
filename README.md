@@ -5,7 +5,7 @@
 
 Preparation:
 
-step-00: prepare and use NVUE
+step-00: prepare the hosts (Netplan) and leafs
 
 step-01: Bridges, VLAN's
 
