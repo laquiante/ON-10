@@ -41,3 +41,8 @@
       register: ipa
     - debug: msg={{ ipa.stdout }}
        
+    - name: Check interface 2
+      shell: /sbin/ip -r a | grep 'eth2'
+      ignore_errors: yes
+      register: result
+    - debug: msg={{ result.stdout }}
