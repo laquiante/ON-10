@@ -16,7 +16,7 @@
 #      ansible.builtin.shell: /sbin/ifreload -a
 
 
-- hosts: host1
+- hosts: host
   name: netplan
   become: yes
   gather_facts: no
@@ -36,10 +36,10 @@
     - name: apply netplan yaml
       shell: netplan apply
       
-    - name: verify
-      ansible.builtin.shell: /sbin/ip -br a
-      register: ipa
-    - debug: msg={{ ipa.stdout }}
+#    - name: verify
+#      ansible.builtin.shell: /sbin/ip -br a
+#      register: ipa
+#    - debug: msg={{ ipa.stdout }}
        
     - name: Check interface 2
       shell: /sbin/ip -br -4 a | grep 'eth2'
