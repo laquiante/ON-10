@@ -26,5 +26,5 @@
   tasks:
     - name: cloud file entfernen
       ansible.builtin.file:
-      path: /etc/50-cloud-init.yaml
-      state: absent
+        path: /etc/50-cloud-init.yaml
+        state: absent
