@@ -46,7 +46,7 @@
   tasks:
     - name: PTM
       copy:
-        src: /home/cumulus/ON-10/topology.dot
+        src: /home/cumulus/ON-10/inventory/files/topology.dot
         dest: /etc/ptm.d/topology.dot
         mode: '0644'
         owner: 'root'
