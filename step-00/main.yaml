@@ -36,3 +36,26 @@
     # aktivieren
     - name: activate changes for leaf
       shell:  nv config apply startup -y
+      
+# optional lab task      
+      
+- hosts: leaf1
+  name: configuring of PTM
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: PTM
+      copy:
+        src: /home/cumulus/ON-10/topology.dot
+        dest: /etc/ptm.d/topology.dot
+        mode: '0644'
+        owner: 'root'
+        group: 'root'
+      notify: restart_ptm
+
+  handlers:
+    - name: restart_ptm
+      service:
+        name=ptmd
+        state=restarted
+      listen: restart_ptm
