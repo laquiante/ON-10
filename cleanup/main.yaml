@@ -1,4 +1,4 @@
-- hosts: leaf
+- hosts: cumulus-nodes
   name: startup
   become: yes
   gather_facts: no
