@@ -1,0 +1,3 @@
+graph "ALQ" {
+"spine3":"swp1" -- "leaf1":"swp1"
+}
