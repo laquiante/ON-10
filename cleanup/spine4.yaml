@@ -1,5 +1,5 @@
 - set:
     system:
-      hostname: spine4.yaml
+      hostname: spine4
       
       
