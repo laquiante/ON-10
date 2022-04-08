@@ -38,6 +38,7 @@
       copy:
         src: /home/cumulus/ON-10/step-01/index.html
         dest: /var/www/html/index.html
+    - name: python test script
       copy: test-script
         src: /home/cumulus/ON-10/step-01/test_script.py
         dest: /home/cumulus/test_script.py
