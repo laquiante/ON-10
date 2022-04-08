@@ -21,6 +21,7 @@
   name: netplan
   become: yes
   gather_facts: no
+  tasks:
     - name: copy netplan yaml
       copy:
         src: /home/cumulus/ON-10/step-01/{{ inventory_hostname }}
