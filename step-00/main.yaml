@@ -75,6 +75,8 @@
     # aktivieren
     - name: nginx-1
       shell: ln -s /etc/nginx/sites-{available,enabled}/nvue.conf
+    - name: nginx-2
       shell: sed -i 's/listen localhost:8765 ssl;/listen \[::\]:8765 ipv6only=off ssl;/g' /etc/nginx/sites-available/nvue.conf
+    - name: nginx-3
       shell: systemctl restart nginx
     
