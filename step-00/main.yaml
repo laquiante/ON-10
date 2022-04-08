@@ -80,3 +80,5 @@
     - name: nginx-3
       shell: systemctl restart nginx
     
+08.04.2022: ok    
+# curl  -u 'cumulus:Academy123' --insecure https://172.16.1.10:8765/cue_v1/interface
