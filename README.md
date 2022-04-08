@@ -5,9 +5,9 @@
 
 Preparation:
 
-step-00: prepare the hosts (Netplan) and leafs, install a webserver on host2
+step-00: prepare the hosts (Netplan) and leafs, install a webserver on host2        08.04.2022
 
-step-01: Bridges, VLAN's
+step-01: Bridges, VLAN's                                                            08.04.2022
 
 step-02: VLAN's and SVI's
 
