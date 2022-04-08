@@ -11,6 +11,11 @@
     - name: activate changes for all cumulus nodes
       shell:  nv config apply startup -y
       
+- hosts: cumulus-nodes host
+  name: clean www
+  become: yes
+  gather_facts: no     
+      
     - name: uninstall nginx
       apt:
         name: nginx
