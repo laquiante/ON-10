@@ -5,8 +5,7 @@
 
 Preparation:
 
-step-00: prepare the hosts (Netplan) and leafs
-    install a webserver on host2
+step-00: prepare the hosts (Netplan) and leafs, install a webserver on host2
 
 step-01: Bridges, VLAN's
 
