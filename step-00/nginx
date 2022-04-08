@@ -1,0 +1,3 @@
+ln -s /etc/nginx/sites-{available,enabled}/nvue.conf
+sed -i 's/listen localhost:8765 ssl;/listen \[::\]:8765 ipv6only=off ssl;/g' /etc/nginx/sites-available/nvue.con
+systemctl restart nginx
