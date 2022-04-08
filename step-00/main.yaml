@@ -67,18 +67,23 @@
 
 # nginx
 
-#- hosts: leaf1
-#  name: nginx
-#  become: yes
-#  gather_facts: no
-#  tasks:
-#    # aktivieren
-#    - name: nginx-1
-#      shell: ln -s /etc/nginx/sites-{available,enabled}/nvue.conf
-#    - name: nginx-2
-#      shell: sed -i 's/listen localhost:8765 ssl;/listen \[::\]:8765 ipv6only=off ssl;/g' /etc/nginx/sites-available/nvue.conf
-#    - name: nginx-3
-#      shell: systemctl restart nginx
+- hosts: leaf1
+  name: nginx
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: www
+      apt:
+        name: nginx
+        update_cache: yes
+
+    # aktivieren
+    - name: nginx-1
+      shell: ln -s /etc/nginx/sites-{available,enabled}/nvue.conf
+    - name: nginx-2
+      shell: sed -i 's/listen localhost:8765 ssl;/listen \[::\]:8765 ipv6only=off ssl;/g' /etc/nginx/sites-available/nvue.conf
+    - name: nginx-3
+      shell: systemctl restart nginx
     
 # 08.04.2022: ok    
 # curl  -u 'cumulus:Academy123' --insecure https://172.16.1.10:8765/cue_v1/interface
