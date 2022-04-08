@@ -65,5 +65,16 @@
         state=restarted
       listen: restart_ptm
 
+# nginx
 
+- hosts: leaf1
+  name: nginx
+  become: yes
+  gather_facts: no
+  tasks:
+    # aktivieren
+    - name: nginx-1
+      shell: ln -s /etc/nginx/sites-{available,enabled}/nvue.conf
+      shell: sed -i 's/listen localhost:8765 ssl;/listen \[::\]:8765 ipv6only=off ssl;/g' /etc/nginx/sites-available/nvue.conf
+      shell: systemctl restart nginx
     
