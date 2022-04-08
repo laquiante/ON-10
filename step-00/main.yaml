@@ -67,15 +67,12 @@
 
 # nginx
 
-- hosts: leaf1
-  name: nginx
-  become: yes
-  gather_facts: no
-  tasks:
-    - name: www
-      apt:
-        name: nginx
-        update_cache: yes
+#- hosts: leaf1
+#  name: nginx
+#  become: yes
+#  gather_facts: no
+#  tasks:
+
 
     # aktivieren
 #    - name: nginx-1
