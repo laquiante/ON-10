@@ -10,3 +10,13 @@
     # aktivieren
     - name: activate changes for all cumulus nodes
       shell:  nv config apply startup -y
+      
+    - name: uninstall nginx
+      apt:
+        name: nginx
+        state: absent
+
+    - name: stop nginx
+      service:
+        name: nginx
+        state: stopped
