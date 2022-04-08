@@ -1,4 +1,4 @@
-# 08-APR-2022, index.html
+# 08-APR-2022, index.html, test-script
 # 14-MAY-2022, preparing the 2 switches with L2, bonding, bridge configuration
 # 14-MAY-2022, hands-on via task-001.yaml and should include spine3 and leaf1
 # 14-NOV-2021, cleaning up a bit
@@ -29,7 +29,7 @@
     - name: apply netplan yaml
       shell: netplan apply
 
-- hosts: host2
+- hosts: host
   name: index
   become: yes
   gather_facts: no
@@ -38,3 +38,7 @@
       copy:
         src: /home/cumulus/ON-10/step-01/index.html
         dest: /var/www/html/index.html
+      copy: test-script
+        src: /home/cumulus/ON-10/step-01/test_script.py
+        dest: /home/cumulus/test_script.py
+        mode: a+x
