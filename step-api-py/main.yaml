@@ -9,16 +9,16 @@
         update_cache: yes
     - name: copy index.html 
       copy:
-        src: /home/cumulus/ON-10/step-01/index.html
+        src: /home/cumulus/ON-10/step-api-py/index.html
         dest: /var/www/html/index.html
     - name: python test script step-01
       copy: 
-        src: /home/cumulus/ON-10/step-01/alq-01.py
+        src: /home/cumulus/ON-10/step-api-py/alq-01.py
         dest: /home/cumulus/alq-01.py
         mode: a+x
     - name: python test script step-02
       copy: 
-        src: /home/cumulus/ON-10/step-01/alq-02.py
+        src: /home/cumulus/ON-10/step-api-py/alq-02.py
         dest: /home/cumulus/alq-02.py
         mode: a+x
 
