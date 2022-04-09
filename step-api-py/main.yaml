@@ -11,12 +11,16 @@
       copy:
         src: /home/cumulus/ON-10/step-01/index.html
         dest: /var/www/html/index.html
-    - name: python test script
+    - name: python test script step-01
       copy: 
-        src: /home/cumulus/ON-10/step-01/test_script.py
-        dest: /home/cumulus/test_script.py
+        src: /home/cumulus/ON-10/step-01/alq-01.py
+        dest: /home/cumulus/alq-01.py
         mode: a+x
-
+    - name: python test script step-02
+      copy: 
+        src: /home/cumulus/ON-10/step-01/alq-02.py
+        dest: /home/cumulus/alq-02.py
+        mode: a+x
 
 # aktivieren
 #    - name: nginx-1
