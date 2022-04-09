@@ -11,6 +11,11 @@
     - name: activate changes for all cumulus nodes
       shell:  nv config apply startup -y
       
+    - name: Remove symlinks
+      file:
+        path: "/etc/nginx/sites-{available,enabled}/nvue.conf"
+        state: absent
+      
 - hosts: host
   name: clean www
   become: yes
