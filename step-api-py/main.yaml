@@ -7,6 +7,15 @@
       apt:
         name: nginx
         update_cache: yes
+    - name: copy index.html 
+      copy:
+        src: /home/cumulus/ON-10/step-01/index.html
+        dest: /var/www/html/index.html
+    - name: python test script
+      copy: 
+        src: /home/cumulus/ON-10/step-01/test_script.py
+        dest: /home/cumulus/test_script.py
+        mode: a+x
 
 
 # aktivieren
