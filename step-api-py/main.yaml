@@ -40,6 +40,15 @@
       ansible.builtin.service:
         name: nginx
         state: restarted  
+- hosts: host1
+  name: api vab test
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: copy vab test script 
+      copy:
+        src: /home/cumulus/ON-10/step-api-py/get_vab_macs.py
+        dest: /home/cumulus/get_vab_macs.py
         
 # 08.04.2022: ok    
 # curl  -u 'cumulus:Academy123' --insecure https://172.16.1.10:8765/cue_v1/interface
