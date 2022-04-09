@@ -1,0 +1,5 @@
+git clone https://github.com/CumulusNetworks/python-nlmanager
+wechsel in das neue Verzeichnis 
+sudo python3 setup.py install
+
+
