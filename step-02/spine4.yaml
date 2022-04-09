@@ -5,14 +5,8 @@
           vlan:
             '2': {}
             '3': {}
-    service:
-      ntp:
-        mgmt:
-          server:
-            0.cumulusnetworks.pool.ntp.org: {}
-            1.cumulusnetworks.pool.ntp.org: {}
-            2.cumulusnetworks.pool.ntp.org: {}
-            3.cumulusnetworks.pool.ntp.org: {}
+    system:
+      hostname: spine4
     interface:
       swp1-2:
         bridge:
