@@ -7,6 +7,11 @@
       apt:
         name: nginx
         update_cache: yes
+    - name: Start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+    
     - name: copy index.html 
       copy:
         src: /home/cumulus/ON-10/step-api-py/index.html
