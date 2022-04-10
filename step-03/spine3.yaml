@@ -58,13 +58,13 @@
           address:
             172.16.2.252/24: {}
           vrr:
+            address:
+              172.16.2.254/24: {}
             mac-address: 00:00:5e:00:01:02
         vlan: 2
       vlan2-3:
         ip:
           vrr:
-            address:
-              172.16.2.254/24: {}
             enable: on
             state:
               up: {}
@@ -74,5 +74,7 @@
           address:
             172.16.3.252/24: {}
           vrr:
+            address:
+              172.16.3.254/24: {}
             mac-address: 00:00:5e:00:01:03
         vlan: 3
