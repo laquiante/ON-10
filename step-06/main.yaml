@@ -4,7 +4,7 @@
   become: yes
   gather_facts: no
   tasks:
-    - name: copy leaf1 task-04.yaml
+    - name: copy step-06
       copy:
         src: /home/cumulus/ON-10/step-06/{{ inventory_hostname }}.yaml
         dest: /etc/nvue.d/startup.yaml
@@ -13,14 +13,17 @@
       shell: nv config apply startup -y
 
 - hosts: host
-  name: Interfaces
+  name: netplan
   become: yes
   gather_facts: no
   tasks:
-    - name: configure IPv4 address 
+    - name: copy netplan yaml
       copy:
         src: /home/cumulus/ON-10/step-06/{{ inventory_hostname }}
-        dest: /etc/network/interfaces
-    - name: activate changes 
-      ansible.builtin.shell: /sbin/ifreload -a
-
+        dest: /etc/netplan/config.yaml
+    - name: apply netplan
+      shell: netplan apply
+    - name: verification
+      ansible.builtin.shell: /sbin/ip -br a
+      register: ipa
+    - debug: msg={{ ipa.stdout }}
