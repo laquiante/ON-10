@@ -6,9 +6,6 @@
             '10':
               vni:
                 '10': {}
-            '20':
-              vni:
-                '20': {}
     evpn:
       enable: on
     nve:
