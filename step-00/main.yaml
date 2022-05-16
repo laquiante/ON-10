@@ -59,4 +59,4 @@
         name=ptmd
         state=restarted
       listen: restart_ptm
-interface
+
