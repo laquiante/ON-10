@@ -32,4 +32,4 @@
       systemd:
         name: nginx
         state: stopped
-      when: nginx_exists.tc == 0
+      when: nginx_exists.rc == 0
