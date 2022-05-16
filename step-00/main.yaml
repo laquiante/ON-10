@@ -60,3 +60,5 @@
         state=restarted
       listen: restart_ptm
 
+# Wenn der Wert für die Schnittstelle der Name und nicht die Adresse sein soll:
+# [lldpcli] # configure lldp portidsubtype ifname
