@@ -29,7 +29,7 @@
       failed_when: nginx_exists.rc not in [0,1]
   
     - name: stop it
-      systemc:
+      systemctl:
         name: nginx
         state: stopped
       when: eginx_exists.tc == 0
