@@ -20,6 +20,9 @@
               swp1:
                 remote-as: external
                 type: unnumbered
+              swp2:
+                remote-as: external
+                type: unnumbered
     interface:
       lo:
         ip:
