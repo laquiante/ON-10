@@ -31,7 +31,7 @@
           bgp:
             address-family:
               ipv4-unicast:
-                static-network:
+                network:
                   172.16.100.3/32: {}
                 enable: on
               l2vpn-evpn:
