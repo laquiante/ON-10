@@ -91,7 +91,7 @@
             enable: on
             address-family:
               ipv4-unicast:
-                static-network:
+                network:
                   172.16.100.2/32: {}
                   172.16.28.0/24: {}
                   172.16.29.0/24: {}
