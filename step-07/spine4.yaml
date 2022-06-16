@@ -8,8 +8,8 @@
             2.cumulusnetworks.pool.ntp.org: {}
             3.cumulusnetworks.pool.ntp.org: {}
     platform:
-      hostname:
-        value: spine4
+    system:
+      hostname: spine4
     interface:
       lo:
         ip:
