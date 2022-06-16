@@ -55,7 +55,7 @@
           vrf: NVIDIA
         type: svi
         vlan: 20
-    platform:
+    system:
       hostname:
         value: leaf1
     router:
@@ -67,7 +67,7 @@
       default:
         router:
           bgp:
-            peer:
+            neighbor:
               swp1:
                 remote-as: external
                 type: unnumbered
