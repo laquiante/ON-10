@@ -17,7 +17,7 @@
         type: swp
       swp2:
         type: swp
-    platform:
+    system:
       hostname:
         value: spine3
     router:
@@ -37,7 +37,7 @@
               l2vpn-evpn:
                 enable: on
             enable: on
-            peer:
+            neighbor:
               swp1:
                 remote-as: external
                 type: unnumbered
