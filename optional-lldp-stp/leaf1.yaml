@@ -1,4 +1,3 @@
-cumulus@leaf2:mgmt:~$ nv config show
 - set:
     system:
       hostname: leaf1
