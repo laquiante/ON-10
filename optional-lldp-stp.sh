@@ -2,12 +2,12 @@
 # ex:ts=4:sw=4:sts=4:et
 # -*- tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*-
 
-# ALQ, Wittdün 2022
+# ALQ, Hamburg 2022
 # 
 # sudo ./r_unit-03
 
-if [ -f /home/cumulus/ON-01/.additional.conf ]; then
-        . /home/cumulus/ON-01/.additional.conf
+if [ -f /home/cumulus/ON-10/.additional.conf ]; then
+        . /home/cumulus/ON-10/.additional.conf
 fi
 
 echo
