@@ -1,7 +1,7 @@
 cumulus@leaf2:mgmt:~$ nv config show
 - set:
     system:
-      hostname: leaf2
+      hostname: leaf1
     interface:
       swp5-6:
         bridge:
