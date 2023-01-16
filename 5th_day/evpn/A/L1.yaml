@@ -32,6 +32,8 @@
                 enable: on
                 network:
                   172.16.100.1/32: {}
+                  172.16.18.0/24: {}
+                  172.16.19.0/24: {}
               l2vpn-evpn:
                 enable: on
             enable: on
@@ -40,13 +42,13 @@
                 address-family:
                   l2vpn-evpn:
                     enable: on
-                remote-as: internal
+                remote-as: external
                 type: unnumbered
               swp2:
-                address-family
+                address-family:
                   l2vpn-evpn:
                     enable: on
-                remote-as: internal
+                remote-as: external
                 type: unnumbered
     interface:
       lo:
@@ -66,3 +68,6 @@
           domain:
             br_default:
               access: 20
+        ip:
+          address:
+            172.16.19.1/24: {}
