@@ -5,10 +5,10 @@
           vlan:
             '10':
               vni:
-                '10': {}
+                '1010': {}
             '20':
               vni:
-                '20': {}
+                '2020': {}
     evpn:
       enable: on
     nve:
@@ -32,8 +32,6 @@
                 enable: on
                 network:
                   172.16.100.1/32: {}
-                  172.16.18.0/24: {}
-                  172.16.19.0/24: {}
               l2vpn-evpn:
                 enable: on
             enable: on
@@ -68,6 +66,4 @@
           domain:
             br_default:
               access: 20
-        ip:
-          address:
-            172.16.19.1/24: {}
+
