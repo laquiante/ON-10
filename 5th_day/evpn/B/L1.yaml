@@ -36,7 +36,7 @@
           address: 172.16.100.1
     router:
       bgp:
-        autonomous-system: 65101
+        autonomous-system: 65102
         enable: on
         router-id: 172.16.100.1
     system:
@@ -66,7 +66,3 @@
                     enable: on
                 remote-as: external
                 type: unnumbered
-            route-import:
-              from-evpn:
-                route-target:
-                  65101:1020: {}
