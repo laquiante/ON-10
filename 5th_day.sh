@@ -34,25 +34,25 @@ do
          "L2 A")
             echo "Troubleshooting based on MLAG setup"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-03/main.yaml
-            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/A/layer2/A/L1.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer2/A/L1.yaml
             break
             ;;
         "L2 B")
             echo "Troubleshooting based on MLAG setup"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-03/main.yaml
-            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/B/layer2/A/L1.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer2/B/L1.yaml
             break
             ;;
         "L2 C")
             echo "Troubleshooting based on MLAG setup"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-03/main.yaml
-            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/C/layer2/A/S3.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer2/C/S3.yaml
             break
             ;;
          "Layer3")
             echo "Troubleshooting based on BGP unnumbered"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-04/main.yaml
-            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/A/layer2/A/L1.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer3/A/L1.yaml
             break
             ;;
         "EVPN")
