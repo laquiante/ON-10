@@ -31,7 +31,7 @@ echo "===            end                ==="
 echo
 
 PS3='Please enter your choice: '
-options=("L2 A" "L2 B" "L2 C" "L3" "EVPN" "Quit")
+options=("L2 A" "L2 B" "L2 C" "L3 A" "L3 B" "EVPN" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -53,10 +53,16 @@ do
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer2/C/main.yaml
             break
             ;;
-         "Layer3")
+         "L3 A")
             echo "Troubleshooting based on BGP unnumbered"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-04/main.yaml
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer3/A/main.yaml
+            break
+            ;;
+         "L3 B")
+            echo "Troubleshooting based on BGP unnumbered"
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-04/main.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer3/B/main.yaml
             break
             ;;
         "EVPN")
