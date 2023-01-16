@@ -39,14 +39,14 @@
               swp1:
                 address-family:
                   l2vpn-evpn:
-                    enable: off
-                remote-as: external
+                    enable: on
+                remote-as: internal
                 type: unnumbered
               swp2:
                 address-family
                   l2vpn-evpn:
-                    enable: off
-                remote-as: external
+                    enable: on
+                remote-as: internal
                 type: unnumbered
     interface:
       lo:
