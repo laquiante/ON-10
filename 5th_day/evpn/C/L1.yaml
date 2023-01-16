@@ -5,7 +5,7 @@
           vlan:
             '10':
               vni:
-                '1': {}
+                '10': {}
     evpn:
       enable: on
     nve:
@@ -27,7 +27,7 @@
         evpn:
           enable: on
           vni:
-            '4001': {}
+            '4002': {}
       default:
         router:
           bgp:
