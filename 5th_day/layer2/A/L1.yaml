@@ -28,4 +28,4 @@
         bridge:
           domain:
             br_default:
-              access: 3
+              access: 2
