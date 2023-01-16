@@ -32,7 +32,7 @@ echo "===            end                ==="
 echo
 
 PS3='Please enter your choice: '
-options=("L2 A" "L2 B" "L2 C" "L3 A" "L3 B" "EVPN A" "EVPB B" "EVPN C" "Quit")
+options=("L2 A" "L2 B" "L2 C" "L3 A" "L3 B" "EVPN A" "EVPN B" "EVPN C" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
