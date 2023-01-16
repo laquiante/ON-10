@@ -26,7 +26,7 @@ echo " A) BGP is not receiving prefixes from the neighbors (spines)"
 echo " B) BGP is not sending prefixes to the neighbors (spines)"
 echo " "
 echo "EVPN"
-echo " A) Host1 (172.16.2.18) can not reach host4 (172.16.3.29)
+echo " A) Host1 (172.16.2.18) can not reach host4 (172.16.3.29)"
 echo " "
 echo "===            end                ==="
 echo
