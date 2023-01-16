@@ -19,7 +19,7 @@
       vrr:
         enable: on
     system:
-      hostname: spine3
+      hostname: spine3-troubleshooting
     interface:
       LEAF1:
         bond:
