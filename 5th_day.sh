@@ -32,7 +32,7 @@ echo "===            end                ==="
 echo
 
 PS3='Please enter your choice: '
-options=("L2 A" "L2 B" "L2 C" "L3 A" "L3 B" "EVPN A" "EVPB B" "Quit")
+options=("L2 A" "L2 B" "L2 C" "L3 A" "L3 B" "EVPN A" "EVPB B" "EVPN C" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -73,9 +73,15 @@ do
             break
             ;;
         "EVPN B")
+            echo "Troubleshooting based on EPVN-L2"
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-05/main.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/evpn/B/main.yaml
+            break
+            ;;
+        "EVPN C")
             echo "Troubleshooting based on EPVN-L3 Sym"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-06/main.yaml
-            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/evpn/B/main.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/evpn/C/main.yaml
             break
             ;;
         "Quit")
