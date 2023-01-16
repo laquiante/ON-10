@@ -26,7 +26,7 @@ echo " A) BGP is not receiving prefixes from the neighbors (spines)"
 echo " B) BGP is not sending prefixes to the neighbors (spines)"
 echo " "
 echo "EVPN"
-echo " A) Host1 (172.16.2.18) can not reach host4 (172.16.3.29)"
+echo " L2 setup: Host1 (172.16.2.18) can not reach host3 (172.16.2.28)"
 echo " "
 echo "===            end                ==="
 echo
@@ -67,7 +67,7 @@ do
             break
             ;;
         "EVPN A")
-            echo "Troubleshooting based on EPVN-L3 Sym"
+            echo "Troubleshooting based on EPVN-L2"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-05/main.yaml
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/evpn/A/main.yaml
             break
