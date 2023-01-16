@@ -2,7 +2,7 @@
 # ex:ts=4:sw=4:sts=4:et
 # -*- tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*-
 
-# ALQ, Hamburg JAN-2023
+# ALQ, Hamburg 16-JAN-2023
 # 
 # sudo ./5th_day 
 
@@ -22,6 +22,9 @@ echo "  B) Host1 (172.16.2.18) can not reach host2 (172.16.3.19)"
 echo "  C) MLAG is broken"
 echo " "
 echo "Layer3"
+echo " A) BGP is not receiving prefixes from the neighbors (spines)"
+echo " B) BGP is not sending prefixes to the neighbors (spines)"
+echo " "
 echo "EVPN"
 echo " "
 echo "===            end                ==="
