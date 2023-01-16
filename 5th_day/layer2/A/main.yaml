@@ -5,7 +5,7 @@
   tasks:
     - name: copy startup.yaml
       copy:
-        src: /home/cumulus/ON-10/5th_day/A/L1.yaml
+        src: /home/cumulus/ON-10/5th_day/layer2/A/L1.yaml
         dest: /etc/nvue.d/startup.yaml
     # aktivieren
     - name: activate changes 
