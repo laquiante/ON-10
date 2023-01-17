@@ -20,6 +20,7 @@ echo "Layer2"
 echo "  A) Host1 (172.16.2.18) can not reach host2 (172.16.3.19)"
 echo "  B) Host1 (172.16.2.18) can not reach host2 (172.16.3.19)"
 echo "  C) MLAG is broken"
+echo "  D) Host1 (172.16.2.18) can not reach host3 (172.16.2.28)"
 echo " "
 echo "Layer3"
 echo " A) BGP is not receiving prefixes from the neighbors (spines)"
@@ -32,7 +33,7 @@ echo "===            end                ==="
 echo
 
 PS3='Please enter your choice: '
-options=("L2 A" "L2 B" "L2 C" "L3 A" "L3 B" "EVPN A" "EVPN B" "EVPN C" "Quit")
+options=("L2 A" "L2 B" "L2 C" "L2 D" "L3 A" "L3 B" "EVPN A" "EVPN B" "EVPN C" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -52,6 +53,12 @@ do
             echo "Troubleshooting based on MLAG setup"
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-03/main.yaml
             ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer2/C/main.yaml
+            break
+            ;;
+        "L2 D")
+            echo "Troubleshooting based on simple L2 (trunks via spines)"
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./step-02/main.yaml
+            ansible-playbook -i /home/cumulus/ON-10/inventory/files/hosts ./5th_day/layer2/D/main.yaml
             break
             ;;
          "L3 A")
