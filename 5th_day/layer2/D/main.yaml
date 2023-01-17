@@ -1,4 +1,4 @@
-- hosts: leaf1 leaf2
+- hosts: leaf1 leaf2 spine3 spine4
   name: startup
   become: yes
   gather_facts: no
