@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+# Verwendung nach hands-on # 07 
+
 
 import requests
 
 print ("Testing using requets and verifying the status code (expecting 200) ")
 
 webserver = {
-        "www1": "172.16.2.18",
-        "www2": "172.16.3.19",
-        "www3": "172.16.2.28",
-        "www4": "172.16.3.29"
+        "www1": "172.16.10.18",
+        "www3": "172.16.10.28",
+        "www4": "172.16.20.29"
 }
 
 for target in webserver:
