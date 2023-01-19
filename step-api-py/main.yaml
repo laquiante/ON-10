@@ -50,6 +50,10 @@
       copy:
         src: /home/cumulus/ON-10/step-api-py/get_vab_macs.py
         dest: /home/cumulus/get_vab_macs.py
+    - name: copy knownhosts 
+      copy:
+        src: /home/cumulus/.ssh/knownhosts
+        dest: /home/cumulus/.ssh/knownhosts
         
 # 08.04.2022: ok    
 # curl  -u 'cumulus:Academy123' --insecure https://172.16.1.10:8765/cue_v1/interface
