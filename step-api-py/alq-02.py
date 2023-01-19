@@ -4,7 +4,7 @@
 
 import requests
 
-print ("Testing using requets and verifying the status code (expecting 200) ")
+print ("Testing the EVPN-L3 fabric using requests and verifying the status code (expecting 200) ")
 
 webserver = {
         "www1": "172.16.10.18",
