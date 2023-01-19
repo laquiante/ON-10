@@ -15,6 +15,6 @@ webserver = {
 for target in webserver:
         ergebnis = requests.get('http://'+webserver[target], auth=('user','pass'))
         if ergebnis.status_code == 200:
-                print("webserver "+target+" is reachable, good job")
+                print("webserver "+target+" is reachable via IP/TCP Port 80, good job")
         else:
                 print("webserver "+target+" is NOT reachable, please have a look")
