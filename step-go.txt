@@ -1,0 +1,11 @@
+cumulus@leaf1:mgmt:~$ sudo apt update
+cumulus@leaf1:mgmt:~$ curl -O https://dl.google.com/go/go1.19.5.linux-amd64.tar.gz
+sudo chown -R root:root ./go
+sudo mv go /usr/local
+nano ~/.profile
+# am Ende hinzufügen
+export GOPATH=$HOME/work
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+#
+source ~/.profile
+#
