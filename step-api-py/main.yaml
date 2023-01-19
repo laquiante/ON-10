@@ -40,6 +40,7 @@
       ansible.builtin.service:
         name: nginx
         state: restarted  
+        
 - hosts: host1
   name: api vab test
   become: yes
