@@ -1,3 +1,5 @@
+# Annahme: EVPN-L3 sym ist deployed
+
 cumulus@leaf1:mgmt:~$ sudo apt update
 cumulus@leaf1:mgmt:~$ curl -O https://dl.google.com/go/go1.19.5.linux-amd64.tar.gz
 sudo chown -R root:root ./go
@@ -9,3 +11,8 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 #
 source ~/.profile
 #
+# wir brauchen einen Testpunkt, z.B. host1 (172.16.10.18)
+sudo apt update
+sudo apt install nginx
+#
+Testen vom leaf1 via curl 172.16.10.18
