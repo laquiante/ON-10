@@ -40,10 +40,10 @@ def via_ssh(kommando,ziel):
 
 def test_reachbility(ziel):
         for n in ziel:
-        answer = os.popen(f"ping -c 2 {n}").read()
-        if "Received = 2" or "Received = 1":
+            answer = os.popen(f"ping -c 2 {n}").read()
+            if "Received = 2" or "Received = 1":
                 print(f"{n} reachable via OOB")
-        else:
+            else:
                 print(f"{n} not reachable via OOB")
         print("\n")
 
