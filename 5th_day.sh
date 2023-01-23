@@ -2,7 +2,7 @@
 # ex:ts=4:sw=4:sts=4:et
 # -*- tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*-
 
-# ALQ, Hamburg 16-JAN-2023
+# ALQ, Hamburg 23-JAN-2023
 # 
 # sudo ./5th_day 
 
